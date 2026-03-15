@@ -1,6 +1,9 @@
 # main.py
 # Batch generator: run kb_min.py for many seeds, measure time, estimate ETA.
 
+
+
+
 import argparse
 import subprocess
 import time
@@ -28,9 +31,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=200, help="How many scenes (seeds) to generate.")
     ap.add_argument("--seed0", type=int, default=0, help="Starting seed.")
-    ap.add_argument("--kb_path", type=str, default="/kubric/kb_min.py", help="Path to kb_min.py inside container.")
+    ap.add_argument("--kb_path", type=str, default="/kubric/maggen_vibration_generator.py", help="Path to kb_min.py inside container.")
     ap.add_argument("--python", type=str, default="python3", help="Python executable.")
-    ap.add_argument("--extra", type=str, default="", help="Extra args passed to kb_min.py (as a single string).")
+    ap.add_argument("--extra", type=str, default="", help="Extra args passed to maggen_vibration_generator.py (as a single string).")
     ap.add_argument("--verbose", action="store_true")
     args = ap.parse_args()
 
